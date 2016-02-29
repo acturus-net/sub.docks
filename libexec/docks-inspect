@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+# Usage: docks inspect <CONTAINER ID/NAME> <JSON PATH>
+# Summary: Check the ip of a container by id/name
+set -e
+
+hash jq 2>/dev/null || { echo >&2 "Please install 'jq'; you will like that you did"; exit 1; }
+
+if [ $# -ne 2 ]; then
+  exec docks-help inspect
+  exit
+fi
+
+docker inspect $1 |jq ".[0]$2"

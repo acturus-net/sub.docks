@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# Usage: docks ip <CONTAINER ID/NAME>
+# Summary: Check the ip of a container by id/name
+set -e
+
+if [ $# -ne 1 ]; then
+  exec docks-help ip
+  exit
+fi
+
+docker inspect --format '{{ .NetworkSettings.IPAddress }}' $1
