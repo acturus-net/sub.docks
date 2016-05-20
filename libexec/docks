@@ -31,6 +31,7 @@ case "$command" in
 * )
   command_path="$(command -v "docks-$command" || true)"
   if [ ! -x "$command_path" ]; then
+    # msholmes (wrap docker when no sub command found)
     #echo "docks: no such command \`$command'" >&2
     #exit 1
     docker $@
