@@ -7,7 +7,7 @@ It is built as a "sub" to greatly simplify its development and maintenance, and 
 Here's how to use it:
 
 ```
-git clone ssh://git@git.apu.edu:7999/sysdev/tools.sub.docks.git ~/.docks
+git clone <THIS REPO> ~/.docks
 echo 'eval "$($HOME/.docks/bin/sub init -)"' >> ~/.bashrc
 source ~/.bashrc
 ```
