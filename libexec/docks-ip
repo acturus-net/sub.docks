@@ -3,4 +3,4 @@
 # Summary: Check the ip of a container by id/name
 set -e
 
-docker inspect --format '{{ .NetworkSettings.IPAddress }}' ${1:-$(docker ps -q)}
+docker inspect --format '{{ .NetworkSettings.IPAddress }}' ${1:-$(docker ps -lq)}
