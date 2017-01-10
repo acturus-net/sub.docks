@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# Usage: docks ip <CONTAINER ID/NAME>
+# Summary: Check the ip of a container by id/name
+set -e
+
+docker logs ${1:-$(docker ps -lq)}
