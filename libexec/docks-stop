@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# Usage: docks stop <CONTAINER ID/NAME>
+# Summary: Connects a terminal a running container
+set -e
+
+if [ $# -eq 1 ]; then
+  docker stop $1
+else
+  docker stop $(docker ps -lq)
+fi
