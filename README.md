@@ -8,7 +8,7 @@ Here's how to use it:
 
 ```
 git clone <THIS REPO> ~/.docks
-echo 'eval "$($HOME/.docks/bin/sub init -)"' >> ~/.bashrc
+echo 'eval "$($HOME/.docks/bin/docks init -)"' >> ~/.bashrc
 source ~/.bashrc
 ```
 
