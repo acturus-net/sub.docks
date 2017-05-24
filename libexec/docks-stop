@@ -3,8 +3,4 @@
 # Summary: Stops a running container
 set -e
 
-if [ $# -eq 1 ]; then
-  docker stop $1
-else
-  docker stop $(docker ps -lq)
-fi
+docker stop ${1:-$(docker ps -lq)}
