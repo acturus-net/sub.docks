@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# Usage: docks rm <CONTAINER ID/NAME>
+# Summary: Removes a container
+set -e
+
+docker rm ${1:-$(docker ps -lq)}
