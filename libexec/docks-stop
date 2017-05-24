@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Usage: docks stop <CONTAINER ID/NAME>
-# Summary: Connects a terminal a running container
+# Summary: Stops a running container
 set -e
 
 if [ $# -eq 1 ]; then
