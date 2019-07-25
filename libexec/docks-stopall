@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# Usage: docks rmall
+# Summary: Removes all existing containers
+set -e
+
+docker stop $(docker ps -aq)
