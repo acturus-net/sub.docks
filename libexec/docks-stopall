@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Usage: docks rmall
+# Usage: docks stopall
 # Summary: Stops all running containers
 set -e
 
