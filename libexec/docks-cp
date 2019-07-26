@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# Usage: docks cp <CONTAINER ID/NAME>:<SRC/PATH> <LOCAL/PATH>
+# Summary: Copy a file from a running container to the host
+set -e
+
+docker cp ${1}:${2} ${3}
