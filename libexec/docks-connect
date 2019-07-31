@@ -6,7 +6,7 @@ set -e
 if [ $# -eq 2 ]; then
   docker exec -ti $1 $2
 elif [ $# -eq 1 ]; then
-  docker exec -ti $(docker ps -lq) $1
+  docker exec -ti $1 /bin/bash
 else
   docker exec -ti ${1:-$(docker ps -lq)} /bin/bash
 fi
