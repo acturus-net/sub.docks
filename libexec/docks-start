@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
-# Usage: docks start <CONTAINER ID/NAME>
-# Summary: Starts a stopped container
+# Usage: docks start
+# Summary: Start the docker service
 set -e
 
-docker start ${1:-$(docker ps -lq)}
+sudo service docker start
